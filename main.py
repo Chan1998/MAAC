@@ -116,12 +116,11 @@ def run(config):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("env_id", help="Name of environment")
-    parser.add_argument("model_name",
-                        help="Name of directory to store " +
+    parser.add_argument("model_name" ,help="Name of directory to store " +
                              "model/training contents")
     parser.add_argument("--n_rollout_threads", default=12, type=int)
     parser.add_argument("--buffer_length", default=int(1e6), type=int)
-    parser.add_argument("--n_episodes", default=50000, type=int)
+    parser.add_argument("--n_episodes", default=200, type=int)     #50000
     parser.add_argument("--episode_length", default=25, type=int)
     parser.add_argument("--steps_per_update", default=100, type=int)
     parser.add_argument("--num_updates", default=4, type=int,
